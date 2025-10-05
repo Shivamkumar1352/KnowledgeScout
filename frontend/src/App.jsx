@@ -119,7 +119,7 @@ function App() {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const backendURL = "https://knowledge-backend.onrender.com/api";
+  const backendURL = "https://knowledgescout-4w9r.onrender.com/api";
 
   // Upload file
   const handleUpload = async () => {
@@ -131,6 +131,7 @@ function App() {
 
     try {
       console.log("Sending file:", file);
+      // console.log("POST URL:", `${backendURL}/upload`);
       const res = await axios.post(`${backendURL}/upload`, formData);
       console.log("Response:", res.data);
       setDocId(res.data.docId);
