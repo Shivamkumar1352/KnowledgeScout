@@ -7,7 +7,14 @@ const uploadRoutes = require('./routes/upload');
 const questionRoutes = require('./routes/question');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173', // local dev
+    'https://knowledge-scout-nine.vercel.app' // your deployed frontend
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 app.use(express.json());
 
 app.get('/ping', (req, res) => res.send('pong'));
