@@ -119,7 +119,7 @@ function App() {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const backendURL = "http://localhost:5001/api";
+  const backendURL = "https://knowledge-backend.onrender.com/api";
 
   // Upload file
   const handleUpload = async () => {
