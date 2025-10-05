@@ -131,7 +131,7 @@ function App() {
 
     try {
       console.log("Sending file:", file);
-      // console.log("POST URL:", `${backendURL}/upload`);
+      console.log("POST URL:", `${backendURL}/upload`);
       const res = await axios.post(`${backendURL}/upload`, formData);
       console.log("Response:", res.data);
       setDocId(res.data.docId);
